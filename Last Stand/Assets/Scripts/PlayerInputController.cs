@@ -14,6 +14,7 @@ public class PlayerInputController : MonoBehaviour
         m_rigidbody = GetComponent<Rigidbody>();
         m_inputActions = new InputActions();
         m_inputActions.Enable();
+        m_inputActions.Gameplay.Jump.performed += OnJumpPerformed;
     }
 
     private void FixedUpdate()
@@ -28,5 +29,25 @@ public class PlayerInputController : MonoBehaviour
                 transform.forward = Vector3.Slerp(transform.forward, moveDirection, 0.15f);
             }
         }
+    }
+
+    private void OnJumpPerformed(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            if (IsGrounded())
+            {
+                m_rigidbody.AddForce(Physics.gravity * -30f);
+            }
+            else
+            {
+                Debug.Log("not grounded");
+            }
+        }
+    }
+
+    private bool IsGrounded()
+    {
+        return Physics.Raycast(transform.position + Vector3.up * 0.1f, Vector3.down, 0.5f);
     }
 }
