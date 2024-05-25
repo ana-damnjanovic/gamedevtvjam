@@ -19,6 +19,11 @@ public class PlayerInputController : MonoBehaviour
     private void Update()
     {
         Vector2 movement = m_inputActions.Gameplay.Movement.ReadValue<Vector2>();
-        m_rigidbody.AddForce( movement.x * 5f, 0, movement.y * 5f );
+        Vector3 moveDirection = new Vector3(movement.x, 0f, movement.y);
+        if (moveDirection.sqrMagnitude > 0f)
+        {
+            m_rigidbody.AddForce(moveDirection * 2f);
+            transform.forward = Vector3.Slerp(transform.forward, moveDirection, 0.15f);
+        }
     }
 }
