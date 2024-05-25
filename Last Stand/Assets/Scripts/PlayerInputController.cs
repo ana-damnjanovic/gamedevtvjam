@@ -16,14 +16,17 @@ public class PlayerInputController : MonoBehaviour
         m_inputActions.Enable();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        Vector2 movement = m_inputActions.Gameplay.Movement.ReadValue<Vector2>();
-        Vector3 moveDirection = new Vector3(movement.x, 0f, movement.y);
-        if (moveDirection.sqrMagnitude > 0f)
+        if (null != m_inputActions)
         {
-            m_rigidbody.AddForce(moveDirection * 2f);
-            transform.forward = Vector3.Slerp(transform.forward, moveDirection, 0.15f);
+            Vector2 movement = m_inputActions.Gameplay.Movement.ReadValue<Vector2>();
+            Vector3 moveDirection = new Vector3(movement.x, 0f, movement.y);
+            if (moveDirection.sqrMagnitude > 0f)
+            {
+                m_rigidbody.AddForce(moveDirection * 10f);
+                transform.forward = Vector3.Slerp(transform.forward, moveDirection, 0.15f);
+            }
         }
     }
 }
