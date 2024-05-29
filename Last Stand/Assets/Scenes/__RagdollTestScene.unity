@@ -799,13 +799,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.4594231, y: -0, z: -0, w: 0.8882176}
-  m_LocalPosition: {x: 0, y: 15.1, z: -13.2}
+  m_LocalRotation: {x: 0, y: 0.8882167, z: -0.45942488, w: 0}
+  m_LocalPosition: {x: -0.0000028512525, y: 4.7, z: 3.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 54.7, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 54.7, y: 180, z: 0}
 --- !u!1 &1094576926
 GameObject:
   m_ObjectHideFlags: 0
@@ -1546,6 +1546,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 210247523676990284, guid: dbb48da7953772a4bb7ff9e5150135be, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 1490564017677850230, guid: dbb48da7953772a4bb7ff9e5150135be, type: 3}
       propertyPath: m_Name
       value: Ragdoll
@@ -1589,6 +1593,18 @@ PrefabInstance:
     - target: {fileID: 5733067141812633611, guid: dbb48da7953772a4bb7ff9e5150135be, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8573319475791408339, guid: dbb48da7953772a4bb7ff9e5150135be, type: 3}
+      propertyPath: m_XMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8573319475791408339, guid: dbb48da7953772a4bb7ff9e5150135be, type: 3}
+      propertyPath: m_YMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8573319475791408339, guid: dbb48da7953772a4bb7ff9e5150135be, type: 3}
+      propertyPath: m_ZMotion
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
