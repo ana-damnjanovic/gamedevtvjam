@@ -869,8 +869,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Last Stand
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 947d9108c6780c444866ec77bb336161, type: 2}
-  m_sharedMaterial: {fileID: -7334264109582708031, guid: 947d9108c6780c444866ec77bb336161, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bf2e74051968a034398b731ef629b64b, type: 2}
+  m_sharedMaterial: {fileID: 7375824542739324471, guid: bf2e74051968a034398b731ef629b64b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

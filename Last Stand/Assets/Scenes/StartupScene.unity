@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_startMenuSceneName: StartMenu
-  m_gameplaySceneName: MainScene
+  m_gameplaySceneName: GameplayScene
 --- !u!1 &514718670
 GameObject:
   m_ObjectHideFlags: 0
