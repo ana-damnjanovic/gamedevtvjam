@@ -15,7 +15,7 @@ public class RagdollPlayerController : MonoBehaviour
 
     private InputActions m_inputActions;
 
-    private void Awake()
+    public void Initialize()
     {
         m_inputActions = new InputActions();
         m_inputActions.Enable();

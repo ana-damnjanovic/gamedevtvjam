@@ -13,7 +13,11 @@ public class GameStateMachine
 
     public void ChangeState(IGameState nextState)
     {
-        IGameState currentState = m_activeStates.Peek();
+        IGameState currentState = null;
+        if (m_activeStates.Count > 0)
+        {
+            currentState = m_activeStates.Peek();
+        }
         if ( null != currentState )
         {
             if ( currentState != nextState )
@@ -31,7 +35,12 @@ public class GameStateMachine
         else
         {
             m_activeStates.Push( nextState );
-            nextState.OnEnter( currentState.StateName );
+            string stateName = "";
+            if (null != currentState)
+            {
+                stateName = currentState.StateName;
+            }
+            nextState.OnEnter( stateName );
         }
     }
 }

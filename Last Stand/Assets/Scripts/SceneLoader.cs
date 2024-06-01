@@ -29,11 +29,11 @@ public class SceneLoader : MonoBehaviour
     private void OnStartSceneLoaded( AsyncOperation sceneLoadOperation )
     {
         sceneLoadOperation.completed -= OnStartSceneLoaded;
-        m_gameStateManager.Initialize();
     }
 
     private void OnGameplaySceneLoaded( AsyncOperation sceneLoadOperation )
     {
         sceneLoadOperation.completed -= OnGameplaySceneLoaded;
+        m_gameStateManager.Initialize();
     }
 }
