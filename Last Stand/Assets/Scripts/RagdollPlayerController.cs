@@ -69,6 +69,8 @@ public class RagdollPlayerController : MonoBehaviour
 
     private bool IsGrounded()
     {
-        return Physics.Raycast(transform.position + Vector3.up * 0.1f, Vector3.down, 0.5f);
+        int layerMask = LayerMask.GetMask("Ground");
+        Ray ray = new Ray(m_hips.transform.position, Vector3.down);
+        return Physics.Raycast(ray, 1f, layerMask, QueryTriggerInteraction.Collide);
     }
 }

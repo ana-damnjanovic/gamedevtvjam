@@ -174,6 +174,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6896044979187168326, guid: dbb48da7953772a4bb7ff9e5150135be, type: 3}
+      propertyPath: m_initializeOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -875,7 +879,7 @@ GameObject:
   - component: {fileID: 1094576929}
   - component: {fileID: 1094576928}
   - component: {fileID: 1094576927}
-  m_Layer: 4
+  m_Layer: 3
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

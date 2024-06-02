@@ -548,7 +548,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 150
-  m_jumpForce: 100
+  m_jumpForce: 5000
   m_initializeOnAwake: 1
   m_hips: {fileID: 8976645346840650546}
   m_hipJoint: {fileID: 8573319475791408339}
