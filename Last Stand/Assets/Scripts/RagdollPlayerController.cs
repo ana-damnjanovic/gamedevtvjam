@@ -16,6 +16,9 @@ public class RagdollPlayerController : MonoBehaviour
     [SerializeField]
     private Rigidbody m_hips;
 
+    [SerializeField]
+    private ConfigurableJoint m_hipJoint;
+
     private InputActions m_inputActions;
 
     public void Initialize()
@@ -42,8 +45,8 @@ public class RagdollPlayerController : MonoBehaviour
 
             if (moveDirection.sqrMagnitude > 0f)
             {
+                m_hipJoint.targetRotation = Quaternion.LookRotation(moveDirection);
                 m_hips.AddForce(moveDirection * m_speed);
-                //transform.forward = Vector3.Slerp(transform.forward, moveDirection, 0.15f);
             }
         }
     }
