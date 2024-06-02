@@ -250,6 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_rotationTarget: {fileID: 0}
+  m_mirrorRotation: 1
 --- !u!1 &1073528788323694346
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,6 +548,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_speed: 150
   m_jumpForce: 100
+  m_initializeOnAwake: 1
   m_hips: {fileID: 8976645346840650546}
 --- !u!1 &2098192111098803793
 GameObject:
@@ -797,7 +799,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c3ca2aca8250cf408ec1a77d94b9ab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_rotationTarget: {fileID: 4341463551533267343}
+  m_rotationTarget: {fileID: 0}
+  m_mirrorRotation: 0
 --- !u!1 &2176999199533452191
 GameObject:
   m_ObjectHideFlags: 0
@@ -1520,6 +1523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_rotationTarget: {fileID: 0}
+  m_mirrorRotation: 0
 --- !u!1 &3139930631999025205
 GameObject:
   m_ObjectHideFlags: 0
@@ -1770,6 +1774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_rotationTarget: {fileID: 0}
+  m_mirrorRotation: 1
 --- !u!1 &3652618813372397516
 GameObject:
   m_ObjectHideFlags: 0
@@ -2492,6 +2497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_rotationTarget: {fileID: 0}
+  m_mirrorRotation: 0
 --- !u!1 &6130257444883429656
 GameObject:
   m_ObjectHideFlags: 0
@@ -2742,6 +2748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_rotationTarget: {fileID: 0}
+  m_mirrorRotation: 0
 --- !u!1 &7381002993263402624
 GameObject:
   m_ObjectHideFlags: 0
@@ -3700,3 +3707,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_rotationTarget: {fileID: 0}
+  m_mirrorRotation: 0

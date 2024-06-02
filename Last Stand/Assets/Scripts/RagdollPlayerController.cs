@@ -11,6 +11,9 @@ public class RagdollPlayerController : MonoBehaviour
     private float m_jumpForce = 100f;
 
     [SerializeField]
+    private bool m_initializeOnAwake = false;
+
+    [SerializeField]
     private Rigidbody m_hips;
 
     private InputActions m_inputActions;
@@ -20,6 +23,14 @@ public class RagdollPlayerController : MonoBehaviour
         m_inputActions = new InputActions();
         m_inputActions.Enable();
         m_inputActions.Gameplay.Jump.performed += OnJumpPerformed;
+    }
+
+    private void Awake()
+    {
+        if ( m_initializeOnAwake )
+        {
+            Initialize();
+        }
     }
 
     private void FixedUpdate()

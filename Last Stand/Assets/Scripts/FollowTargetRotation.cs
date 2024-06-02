@@ -8,6 +8,9 @@ public class FollowTargetRotation : MonoBehaviour
     [SerializeField]
     private Transform m_rotationTarget;
 
+    [SerializeField]
+    private bool m_mirrorRotation = false;
+
     private ConfigurableJoint m_configurableJoint;
     private void Awake()
     {
@@ -16,6 +19,6 @@ public class FollowTargetRotation : MonoBehaviour
 
     private void Update()
     {
-        m_configurableJoint.targetRotation = m_rotationTarget.rotation;
+        m_configurableJoint.targetRotation = m_mirrorRotation ? Quaternion.Inverse(m_rotationTarget.rotation) : m_rotationTarget.rotation;
     }
 }
