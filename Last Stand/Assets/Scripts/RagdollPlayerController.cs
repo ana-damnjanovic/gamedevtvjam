@@ -45,7 +45,8 @@ public class RagdollPlayerController : MonoBehaviour
 
             if (moveDirection.sqrMagnitude > 0f)
             {
-                m_hipJoint.targetRotation = Quaternion.LookRotation(moveDirection);
+                Vector3 hipFacingDirection = new Vector3(-moveDirection.x, moveDirection.y, moveDirection.z);
+                m_hipJoint.targetRotation = Quaternion.LookRotation(hipFacingDirection);
                 m_hips.AddForce(moveDirection * m_speed);
             }
         }
