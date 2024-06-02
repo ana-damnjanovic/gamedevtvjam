@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7753243732258605681}
   - component: {fileID: 5422082845731717473}
   - component: {fileID: 5286728868348428157}
+  - component: {fileID: 7029994531643784076}
   m_Layer: 6
   m_Name: LeftShoulder
   m_TagString: Untagged
@@ -64,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2edcf34e29f5392449cc356d6ddc1a4b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -236,6 +237,19 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &7029994531643784076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651508283850772582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c3ca2aca8250cf408ec1a77d94b9ab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_rotationTarget: {fileID: 0}
 --- !u!1 &1073528788323694346
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,7 +314,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2edcf34e29f5392449cc356d6ddc1a4b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -548,6 +562,7 @@ GameObject:
   - component: {fileID: 6425309986446735933}
   - component: {fileID: 8976645346840650546}
   - component: {fileID: 8573319475791408339}
+  - component: {fileID: 8069129846375361439}
   m_Layer: 6
   m_Name: Hips
   m_TagString: Untagged
@@ -598,7 +613,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2edcf34e29f5392449cc356d6ddc1a4b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -770,6 +785,19 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &8069129846375361439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098192111098803793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c3ca2aca8250cf408ec1a77d94b9ab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_rotationTarget: {fileID: 4341463551533267343}
 --- !u!1 &2176999199533452191
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,7 +862,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2edcf34e29f5392449cc356d6ddc1a4b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1070,7 +1098,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2edcf34e29f5392449cc356d6ddc1a4b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1256,6 +1284,7 @@ GameObject:
   - component: {fileID: 4385425562342437860}
   - component: {fileID: 3298778287424454830}
   - component: {fileID: 3710933663373045401}
+  - component: {fileID: 5141596259143355505}
   m_Layer: 6
   m_Name: RightThigh
   m_TagString: Untagged
@@ -1306,7 +1335,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2edcf34e29f5392449cc356d6ddc1a4b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1478,6 +1507,19 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &5141596259143355505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2807973671051608578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c3ca2aca8250cf408ec1a77d94b9ab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_rotationTarget: {fileID: 0}
 --- !u!1 &3139930631999025205
 GameObject:
   m_ObjectHideFlags: 0
@@ -1492,6 +1534,7 @@ GameObject:
   - component: {fileID: 5804754913077621760}
   - component: {fileID: 3364067416683447284}
   - component: {fileID: 5640634631728657267}
+  - component: {fileID: 6184199571044691480}
   m_Layer: 6
   m_Name: RightShoulder
   m_TagString: Untagged
@@ -1542,7 +1585,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2edcf34e29f5392449cc356d6ddc1a4b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1714,6 +1757,19 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &6184199571044691480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3139930631999025205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c3ca2aca8250cf408ec1a77d94b9ab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_rotationTarget: {fileID: 0}
 --- !u!1 &3652618813372397516
 GameObject:
   m_ObjectHideFlags: 0
@@ -1778,7 +1834,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2edcf34e29f5392449cc356d6ddc1a4b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2014,7 +2070,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2edcf34e29f5392449cc356d6ddc1a4b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2200,6 +2256,7 @@ GameObject:
   - component: {fileID: 1908560178824039204}
   - component: {fileID: 7978740854297057385}
   - component: {fileID: 6470929111743082952}
+  - component: {fileID: 8297248142976498647}
   m_Layer: 6
   m_Name: LeftThigh
   m_TagString: Untagged
@@ -2250,7 +2307,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2edcf34e29f5392449cc356d6ddc1a4b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2422,6 +2479,19 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &8297248142976498647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5337119859648973242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c3ca2aca8250cf408ec1a77d94b9ab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_rotationTarget: {fileID: 0}
 --- !u!1 &6130257444883429656
 GameObject:
   m_ObjectHideFlags: 0
@@ -2436,6 +2506,7 @@ GameObject:
   - component: {fileID: 1629995410212040874}
   - component: {fileID: 6202355185269315304}
   - component: {fileID: 1583366185891556573}
+  - component: {fileID: 2991789414891529012}
   m_Layer: 6
   m_Name: Head
   m_TagString: Untagged
@@ -2486,7 +2557,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2edcf34e29f5392449cc356d6ddc1a4b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2658,6 +2729,19 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &2991789414891529012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6130257444883429656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c3ca2aca8250cf408ec1a77d94b9ab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_rotationTarget: {fileID: 0}
 --- !u!1 &7381002993263402624
 GameObject:
   m_ObjectHideFlags: 0
@@ -2722,7 +2806,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2edcf34e29f5392449cc356d6ddc1a4b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2958,7 +3042,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2edcf34e29f5392449cc356d6ddc1a4b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3194,7 +3278,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2edcf34e29f5392449cc356d6ddc1a4b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3380,6 +3464,7 @@ GameObject:
   - component: {fileID: 3815333948276592446}
   - component: {fileID: 3320528127831893559}
   - component: {fileID: 7249834618375266238}
+  - component: {fileID: 7380573778485772910}
   m_Layer: 6
   m_Name: Torso
   m_TagString: Untagged
@@ -3430,7 +3515,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2edcf34e29f5392449cc356d6ddc1a4b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3602,3 +3687,16 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &7380573778485772910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8987964143646736493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c3ca2aca8250cf408ec1a77d94b9ab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_rotationTarget: {fileID: 0}
