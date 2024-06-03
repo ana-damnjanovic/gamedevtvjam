@@ -7,7 +7,7 @@ public class CollisionNotifier : MonoBehaviour
 {
     public event System.Action<Collider, Collision> Collided;
 
-    private Collider m_collider;
+    private Collider m_collider = null;
 
     private void Awake()
     {
@@ -16,6 +16,9 @@ public class CollisionNotifier : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        Collided.Invoke(m_collider, other);
+        if (null != m_collider)
+        {
+            Collided.Invoke(m_collider, other);
+        }
     }
 }
