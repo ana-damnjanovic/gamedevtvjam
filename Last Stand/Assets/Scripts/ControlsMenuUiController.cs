@@ -20,6 +20,10 @@ public class ControlsMenuUiController : MonoBehaviour
     [SerializeField]
     private GameObject m_p2ReadyToggle;
 
+    // delay the event slightly so players can see both checkmarks on screen
+    [SerializeField]
+    private float m_playerReadyDelay = 0.15f;
+
     public event System.Action PlayersReady = delegate { };
 
     public void Activate()
@@ -48,7 +52,7 @@ public class ControlsMenuUiController : MonoBehaviour
         m_p1ReadyToggle.SetActive(true);
         if (m_p2ReadyToggle.activeInHierarchy)
         {
-            PlayersReady.Invoke();
+            StartCoroutine(WaitAndInvokePlayersReady());
         }
     }
 
@@ -57,8 +61,14 @@ public class ControlsMenuUiController : MonoBehaviour
         m_p2ReadyToggle.SetActive(true);
         if (m_p1ReadyToggle.activeInHierarchy)
         {
-            PlayersReady.Invoke();
+            StartCoroutine(WaitAndInvokePlayersReady());
         }
+    }
+
+    private IEnumerator WaitAndInvokePlayersReady()
+    {
+        yield return new WaitForSeconds(m_playerReadyDelay);
+        PlayersReady.Invoke();
     }
 
 }
