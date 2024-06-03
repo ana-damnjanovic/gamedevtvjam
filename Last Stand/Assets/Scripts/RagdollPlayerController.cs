@@ -58,6 +58,14 @@ public class RagdollPlayerController : MonoBehaviour
         m_animator.enabled = true;
     }
 
+    public void DisableInputs()
+    {
+        m_jumpAction.action.performed -= OnJumpPerformed;
+        m_jumpAction.action.Disable();
+        m_inputActions.Disable();
+        m_movementAction.action.Disable();
+    }
+
     private void Awake()
     {
         if ( m_initializeOnAwake )

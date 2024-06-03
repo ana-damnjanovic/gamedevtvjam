@@ -39,6 +39,7 @@ public class GameplayGameState : IGameState
         string winnerName = "";
         for (int i = 0; i < m_playerControllers.Length; ++i)
         {
+            m_playerControllers[i].DisableInputs();
             if (m_playerControllers[i] != losingPlayer)
             {
                 winnerName = m_playerControllers[i].gameObject.name;
