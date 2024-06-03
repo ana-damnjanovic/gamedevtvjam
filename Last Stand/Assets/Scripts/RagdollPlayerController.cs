@@ -117,7 +117,8 @@ public class RagdollPlayerController : MonoBehaviour
                 }
                 else
                 {
-                    //m_hips.AddForce(collider.transform.position - collision.GetContact(0).normal * 250f);
+
+                    m_hips.AddForce(collision.GetContact(0).normal * m_speed * 25f);
                 }
 
                 //Vector3 bounceDirection = collider.transform.position - collision.gameObject.transform.position;
