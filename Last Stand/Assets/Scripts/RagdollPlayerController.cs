@@ -30,6 +30,9 @@ public class RagdollPlayerController : MonoBehaviour
     [SerializeField]
     private InputActionReference m_jumpAction;
 
+    [SerializeField]
+    private Animator m_animator;
+
     private bool m_isBouncing = false;
 
     private Coroutine m_bounceCoroutine;
@@ -51,6 +54,8 @@ public class RagdollPlayerController : MonoBehaviour
         {
             m_collisionNotifiers[iNotifier].Collided += OnCollided;
         }
+
+        m_animator.enabled = true;
     }
 
     private void Awake()
