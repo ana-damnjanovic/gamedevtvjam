@@ -8,7 +8,7 @@ public class PlayerLostDetector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent<RagdollPlayerController>(out RagdollPlayerController playerController))
+        if (other.transform.parent.TryGetComponent<RagdollPlayerController>(out RagdollPlayerController playerController))
         {
             PlayerLost.Invoke(playerController);
         }

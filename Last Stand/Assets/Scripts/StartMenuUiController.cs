@@ -11,7 +11,7 @@ public class StartMenuUiController : MonoBehaviour
     [SerializeField]
     private Button m_playButton;
 
-    public event System.Action PlayGameRequested = delegate { };
+    public event System.Action PlayGameButtonPressed = delegate { };
 
     public void Activate()
     {
@@ -27,6 +27,6 @@ public class StartMenuUiController : MonoBehaviour
 
     private void OnPlayButtonPressed()
     {
-        PlayGameRequested.Invoke();
+        PlayGameButtonPressed.Invoke();
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StartMenuGameState : IGameState
 {
-    private static string STATE_NAME = "MainMenuGameState";
+    private static string STATE_NAME = "StartMenuGameState";
     public string StateName => STATE_NAME;
 
     public event System.Action PlayGameRequested = delegate { };
@@ -18,13 +18,13 @@ public class StartMenuGameState : IGameState
 
     public void OnEnter(string previous)
     {
-        m_startMenuUiController.PlayGameRequested += OnPlayGameRequested;
+        m_startMenuUiController.PlayGameButtonPressed += OnPlayGameRequested;
         m_startMenuUiController.Activate();
     }
 
     public void OnExit(string next)
     {
-        m_startMenuUiController.PlayGameRequested -= OnPlayGameRequested;
+        m_startMenuUiController.PlayGameButtonPressed -= OnPlayGameRequested;
         m_startMenuUiController.Deactivate();
     }
 
