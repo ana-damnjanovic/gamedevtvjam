@@ -268,6 +268,54 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "UI",
+            "id": "c8d85a48-9db8-4d44-b395-a98572b53b19",
+            "actions": [
+                {
+                    "name": "P1 Ready",
+                    "type": "Button",
+                    "id": "1079d517-6436-4f94-83a5-088f316cf3cc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "P2 Ready",
+                    "type": "Button",
+                    "id": "4540ec54-0504-4301-974d-75d3b61151f6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d4dafd84-80f0-4bcf-93ea-b49b696cc419",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "P1 Ready",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "266f8c35-c7ba-4ccb-8a65-2674ca008dee",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "P2 Ready",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

@@ -7,7 +7,7 @@ public class StartMenuGameState : IGameState
     private static string STATE_NAME = "StartMenuGameState";
     public string StateName => STATE_NAME;
 
-    public event System.Action PlayGameRequested = delegate { };
+    public event System.Action StartGameRequested = delegate { };
 
     private StartMenuUiController m_startMenuUiController;
 
@@ -30,6 +30,6 @@ public class StartMenuGameState : IGameState
 
     private void OnPlayGameRequested()
     {
-        PlayGameRequested.Invoke();
+        StartGameRequested.Invoke();
     }
 }

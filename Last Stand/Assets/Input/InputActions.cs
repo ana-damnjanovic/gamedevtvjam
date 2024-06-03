@@ -290,6 +290,54 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""UI"",
+            ""id"": ""c8d85a48-9db8-4d44-b395-a98572b53b19"",
+            ""actions"": [
+                {
+                    ""name"": ""P1 Ready"",
+                    ""type"": ""Button"",
+                    ""id"": ""1079d517-6436-4f94-83a5-088f316cf3cc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""P2 Ready"",
+                    ""type"": ""Button"",
+                    ""id"": ""4540ec54-0504-4301-974d-75d3b61151f6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""d4dafd84-80f0-4bcf-93ea-b49b696cc419"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""P1 Ready"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""266f8c35-c7ba-4ccb-8a65-2674ca008dee"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""P2 Ready"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -304,6 +352,10 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_Gameplay2 = asset.FindActionMap("Gameplay2", throwIfNotFound: true);
         m_Gameplay2_Movement = m_Gameplay2.FindAction("Movement", throwIfNotFound: true);
         m_Gameplay2_Jump = m_Gameplay2.FindAction("Jump", throwIfNotFound: true);
+        // UI
+        m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
+        m_UI_P1Ready = m_UI.FindAction("P1 Ready", throwIfNotFound: true);
+        m_UI_P2Ready = m_UI.FindAction("P2 Ready", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -485,6 +537,60 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         }
     }
     public Gameplay2Actions @Gameplay2 => new Gameplay2Actions(this);
+
+    // UI
+    private readonly InputActionMap m_UI;
+    private List<IUIActions> m_UIActionsCallbackInterfaces = new List<IUIActions>();
+    private readonly InputAction m_UI_P1Ready;
+    private readonly InputAction m_UI_P2Ready;
+    public struct UIActions
+    {
+        private @InputActions m_Wrapper;
+        public UIActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @P1Ready => m_Wrapper.m_UI_P1Ready;
+        public InputAction @P2Ready => m_Wrapper.m_UI_P2Ready;
+        public InputActionMap Get() { return m_Wrapper.m_UI; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(UIActions set) { return set.Get(); }
+        public void AddCallbacks(IUIActions instance)
+        {
+            if (instance == null || m_Wrapper.m_UIActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_UIActionsCallbackInterfaces.Add(instance);
+            @P1Ready.started += instance.OnP1Ready;
+            @P1Ready.performed += instance.OnP1Ready;
+            @P1Ready.canceled += instance.OnP1Ready;
+            @P2Ready.started += instance.OnP2Ready;
+            @P2Ready.performed += instance.OnP2Ready;
+            @P2Ready.canceled += instance.OnP2Ready;
+        }
+
+        private void UnregisterCallbacks(IUIActions instance)
+        {
+            @P1Ready.started -= instance.OnP1Ready;
+            @P1Ready.performed -= instance.OnP1Ready;
+            @P1Ready.canceled -= instance.OnP1Ready;
+            @P2Ready.started -= instance.OnP2Ready;
+            @P2Ready.performed -= instance.OnP2Ready;
+            @P2Ready.canceled -= instance.OnP2Ready;
+        }
+
+        public void RemoveCallbacks(IUIActions instance)
+        {
+            if (m_Wrapper.m_UIActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IUIActions instance)
+        {
+            foreach (var item in m_Wrapper.m_UIActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_UIActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public UIActions @UI => new UIActions(this);
     public interface IGameplayActions
     {
         void OnMovement(InputAction.CallbackContext context);
@@ -496,5 +602,10 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+    }
+    public interface IUIActions
+    {
+        void OnP1Ready(InputAction.CallbackContext context);
+        void OnP2Ready(InputAction.CallbackContext context);
     }
 }

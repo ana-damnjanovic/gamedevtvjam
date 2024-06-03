@@ -9,6 +9,9 @@ public class SceneLoader : MonoBehaviour
     private string m_startMenuSceneName;
 
     [SerializeField]
+    private string m_controlsMenuSceneName;
+
+    [SerializeField]
     private string m_gameplaySceneName;
 
     [SerializeField]
@@ -32,6 +35,8 @@ public class SceneLoader : MonoBehaviour
         AsyncOperation startMenuLoadOperation = SceneManager.LoadSceneAsync(m_startMenuSceneName, LoadSceneMode.Additive);
         startMenuLoadOperation.allowSceneActivation = true;
         startMenuLoadOperation.completed += OnStartSceneLoaded;
+
+        AsyncOperation controlsMenuLoadOperation = SceneManager.LoadSceneAsync( m_controlsMenuSceneName, LoadSceneMode.Additive );
 
         AsyncOperation gameplaySceneLoadOperation = SceneManager.LoadSceneAsync(m_gameplaySceneName, LoadSceneMode.Additive);
         gameplaySceneLoadOperation.allowSceneActivation = false;

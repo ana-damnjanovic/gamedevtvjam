@@ -6,6 +6,7 @@ public class GameStateManager : MonoBehaviour
 {
     private GameStateMachine m_stateMachine;
     private StartMenuGameState m_startMenuState;
+    private ControlsMenuGameState m_controlsMenuState;
     private GameplayGameState m_gameplayState;
     private GameOverMenuGameState m_gameOverState;
 
@@ -14,7 +15,9 @@ public class GameStateManager : MonoBehaviour
     public void Initialize()
     {
         m_startMenuState = new StartMenuGameState();
-        m_startMenuState.PlayGameRequested += OnStartGameRequested;
+        m_startMenuState.StartGameRequested += OnStartGameRequested;
+        m_controlsMenuState = new ControlsMenuGameState();
+        m_controlsMenuState.PlayGameRequested += OnPlayGameRequested;
         m_gameplayState = new GameplayGameState();
         m_gameplayState.EndGameRequested += OnGameOverRequested;
         m_gameOverState = new GameOverMenuGameState();
@@ -25,6 +28,11 @@ public class GameStateManager : MonoBehaviour
     }
 
     private void OnStartGameRequested()
+    {
+        m_stateMachine.ChangeState( m_controlsMenuState );
+    }
+
+    private void OnPlayGameRequested()
     {
         m_stateMachine.ChangeState( m_gameplayState );
     }

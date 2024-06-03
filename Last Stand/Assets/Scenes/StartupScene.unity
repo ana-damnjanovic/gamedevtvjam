@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_startMenuSceneName: StartMenu
+  m_controlsMenuSceneName: ControlsMenu
   m_gameplaySceneName: GameplayScene
   m_gameOverMenuSceneName: GameOverMenu
   m_startupSceneName: StartupScene
