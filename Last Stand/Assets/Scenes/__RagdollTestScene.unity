@@ -1044,8 +1044,16 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: f915d7f166534411ba7189b673e50401, type: 2}
     - target: {fileID: 6896044979187168326, guid: dbb48da7953772a4bb7ff9e5150135be, type: 3}
       propertyPath: m_speed
-      value: -150
+      value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 6896044979187168326, guid: dbb48da7953772a4bb7ff9e5150135be, type: 3}
+      propertyPath: m_jumpAction
+      value: 
+      objectReference: {fileID: -9133526935379458189, guid: 777bee6b3649f1641937c271d85380cb, type: 3}
+    - target: {fileID: 6896044979187168326, guid: dbb48da7953772a4bb7ff9e5150135be, type: 3}
+      propertyPath: m_movementAction
+      value: 
+      objectReference: {fileID: -1207432337948510741, guid: 777bee6b3649f1641937c271d85380cb, type: 3}
     - target: {fileID: 6896044979187168326, guid: dbb48da7953772a4bb7ff9e5150135be, type: 3}
       propertyPath: m_layerMask.m_Bits
       value: 64
@@ -1092,7 +1100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8573319475791408339, guid: dbb48da7953772a4bb7ff9e5150135be, type: 3}
       propertyPath: m_AngularYZDrive.positionSpring
-      value: 100
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: 8600613564527784249, guid: dbb48da7953772a4bb7ff9e5150135be, type: 3}
       propertyPath: m_Layer
@@ -1113,7 +1121,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6130257444883429656, guid: dbb48da7953772a4bb7ff9e5150135be, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1231658955}
+    - targetCorrespondingSourceObject: {fileID: 8987964143646736493, guid: dbb48da7953772a4bb7ff9e5150135be, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2044745034}
+    - targetCorrespondingSourceObject: {fileID: 2098192111098803793, guid: dbb48da7953772a4bb7ff9e5150135be, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1346204243}
   m_SourcePrefab: {fileID: 100100000, guid: dbb48da7953772a4bb7ff9e5150135be, type: 3}
 --- !u!1 &1094576926
 GameObject:
@@ -1221,6 +1238,40 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1415904080}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1231658947 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6130257444883429656, guid: dbb48da7953772a4bb7ff9e5150135be, type: 3}
+  m_PrefabInstance: {fileID: 1069704830}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1231658955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231658947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5195a29b6456d8b46a594ebc9ef185bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1346204236 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2098192111098803793, guid: dbb48da7953772a4bb7ff9e5150135be, type: 3}
+  m_PrefabInstance: {fileID: 1069704830}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1346204243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346204236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5195a29b6456d8b46a594ebc9ef185bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1349878487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1617,6 +1668,23 @@ CapsuleCollider:
   m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: 0.75, z: 0}
+--- !u!1 &2044745026 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8987964143646736493, guid: dbb48da7953772a4bb7ff9e5150135be, type: 3}
+  m_PrefabInstance: {fileID: 1069704830}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2044745034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044745026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5195a29b6456d8b46a594ebc9ef185bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2056225423
 GameObject:
   m_ObjectHideFlags: 0
@@ -1898,18 +1966,6 @@ PrefabInstance:
     - target: {fileID: 5733067141812633611, guid: dbb48da7953772a4bb7ff9e5150135be, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6896044979187168326, guid: dbb48da7953772a4bb7ff9e5150135be, type: 3}
-      propertyPath: m_layerMask.m_Bits
-      value: 128
-      objectReference: {fileID: 0}
-    - target: {fileID: 8573319475791408339, guid: dbb48da7953772a4bb7ff9e5150135be, type: 3}
-      propertyPath: m_AngularXDrive.positionSpring
-      value: 750
-      objectReference: {fileID: 0}
-    - target: {fileID: 8573319475791408339, guid: dbb48da7953772a4bb7ff9e5150135be, type: 3}
-      propertyPath: m_AngularYZDrive.positionSpring
-      value: 750
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

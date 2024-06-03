@@ -24,15 +24,33 @@ public class RagdollPlayerController : MonoBehaviour
 
     private InputActions m_inputActions;
 
+    [SerializeField]
+    private InputActionReference m_movementAction;
+
+    [SerializeField]
+    private InputActionReference m_jumpAction;
+
     private bool m_isBouncing = false;
 
     private Coroutine m_bounceCoroutine;
+
+    private CollisionNotifier[] m_collisionNotifiers;
+
+    public Vector3 HipVelocity => m_hips.velocity;
 
     public void Initialize()
     {
         m_inputActions = new InputActions();
         m_inputActions.Enable();
-        m_inputActions.Gameplay.Jump.performed += OnJumpPerformed;
+        m_movementAction.action.Enable();
+        m_jumpAction.action.Enable();
+        m_jumpAction.action.performed += OnJumpPerformed;
+
+        m_collisionNotifiers = GetComponentsInChildren<CollisionNotifier>();
+        for (int iNotifier = 0; iNotifier < m_collisionNotifiers.Length; ++iNotifier)
+        {
+            m_collisionNotifiers[iNotifier].Collided += OnCollided;
+        }
     }
 
     private void Awake()
@@ -49,7 +67,7 @@ public class RagdollPlayerController : MonoBehaviour
         {
             if (!m_isBouncing)
             {
-                Vector2 movement = m_inputActions.Gameplay.Movement.ReadValue<Vector2>();
+                Vector2 movement = m_movementAction.action.ReadValue<Vector2>();
                 Vector3 moveDirection = new Vector3(movement.x, 0f, movement.y);
 
                 if (moveDirection.sqrMagnitude > 0f)
@@ -84,22 +102,28 @@ public class RagdollPlayerController : MonoBehaviour
         Ray ray = new Ray(m_hips.transform.position, Vector3.down);
         return Physics.Raycast(ray, 1f, layerMask, QueryTriggerInteraction.Collide);
     }
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnCollided(Collider collider, Collision collision)
     {
-        if (collision.gameObject.layer == m_layerMask)
+        if ((m_layerMask & (1 << collision.gameObject.layer)) != 0 )
         {
             Debug.Log(collision.gameObject.name);
 
             if (null == m_bounceCoroutine)
+            {
+                if (m_hips.velocity.magnitude > 1f)
                 {
-                    Vector3 bounceDirection = m_hips.transform.position - collision.gameObject.transform.position;
-                    bounceDirection.y = 0;
-
-                    Vector2 movement = m_inputActions.Gameplay.Movement.ReadValue<Vector2>();
-                    Vector3 moveDirection = new Vector3(movement.x, 0f, movement.y);
-                    m_hips.AddForce(bounceDirection * m_speed * 1000f);
-                    m_bounceCoroutine = StartCoroutine(BounceCooldown(1f));
+                    m_hips.velocity = m_hips.velocity * -25f;
                 }
+                else
+                {
+                    //m_hips.AddForce(collider.transform.position - collision.GetContact(0).normal * 250f);
+                }
+
+                //Vector3 bounceDirection = collider.transform.position - collision.gameObject.transform.position;
+                //m_hips.AddForce(bounceDirection * m_speed * 10f);
+                m_bounceCoroutine = StartCoroutine(BounceCooldown(1f));
+            }
         }
     }
     private IEnumerator BounceCooldown(float bounceTime)

@@ -497,6 +497,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5733067141812633611}
   - component: {fileID: 6896044979187168326}
+  - component: {fileID: 2489770830812452585}
   m_Layer: 0
   m_Name: Ragdoll
   m_TagString: Untagged
@@ -552,6 +553,38 @@ MonoBehaviour:
   m_initializeOnAwake: 1
   m_hips: {fileID: 8976645346840650546}
   m_hipJoint: {fileID: 8573319475791408339}
+  m_layerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  m_movementAction: {fileID: -2342136024207181653, guid: 777bee6b3649f1641937c271d85380cb, type: 3}
+  m_jumpAction: {fileID: -4729837511096848303, guid: 777bee6b3649f1641937c271d85380cb, type: 3}
+--- !u!54 &2489770830812452585
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490564017677850230}
+  serializedVersion: 4
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2098192111098803793
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,6 +599,7 @@ GameObject:
   - component: {fileID: 6425309986446735933}
   - component: {fileID: 8976645346840650546}
   - component: {fileID: 8573319475791408339}
+  - component: {fileID: 4106946868373331861}
   m_Layer: 6
   m_Name: Hips
   m_TagString: Untagged
@@ -788,6 +822,18 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &4106946868373331861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098192111098803793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5195a29b6456d8b46a594ebc9ef185bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2176999199533452191
 GameObject:
   m_ObjectHideFlags: 0
@@ -2500,6 +2546,7 @@ GameObject:
   - component: {fileID: 6202355185269315304}
   - component: {fileID: 1583366185891556573}
   - component: {fileID: 2991789414891529012}
+  - component: {fileID: 1463988023737111403}
   m_Layer: 6
   m_Name: Head
   m_TagString: Untagged
@@ -2736,6 +2783,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_rotationTarget: {fileID: 8262818354788698526}
   m_mirrorRotation: 0
+--- !u!114 &1463988023737111403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6130257444883429656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5195a29b6456d8b46a594ebc9ef185bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7381002993263402624
 GameObject:
   m_ObjectHideFlags: 0
@@ -3459,6 +3518,7 @@ GameObject:
   - component: {fileID: 3320528127831893559}
   - component: {fileID: 7249834618375266238}
   - component: {fileID: 7380573778485772910}
+  - component: {fileID: 1660059952082352237}
   m_Layer: 6
   m_Name: Torso
   m_TagString: Untagged
@@ -3695,6 +3755,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_rotationTarget: {fileID: 2190004451696160338}
   m_mirrorRotation: 0
+--- !u!114 &1660059952082352237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8987964143646736493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5195a29b6456d8b46a594ebc9ef185bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5284290649256415232
 PrefabInstance:
   m_ObjectHideFlags: 0
